@@ -1,1 +1,3 @@
-# FreeCodeCampLearning
+# FreeCodeCampLearning.
+
+## This repo keeps track of my code learning progress at freeCodeCamp.
