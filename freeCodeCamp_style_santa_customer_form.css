@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+main {
+  width: 50%;
+  margin-left: auto;
+  background-color: #170e075b;
+  padding: 1.5rem 3rem 1.5rem 3rem;
+}
+
+h1,
+h2,
+#description,
+#send-message {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+input[type="radio"],
+[type="checkbox"] {
+  margin: 0.3rem;
+}
+
+textarea,
+button,
+.entry > input,
+.group > select {
+  width: 100%;
+}
+
+label {
+  display: block;
+}
+
+textarea,
+input[type="text"],
+input[type="number"],
+input[type="email"],
+select,
+option {
+  font: inherit;
+  font-size: inherit;
+  color: black;
+}
+
+.survey {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.group {
+  margin-top: 1rem;
+}
+
+.background-image {
+  background-image: url(https://images.pexels.com/photos/1556679/pexels-photo-1556679.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.message-box {
+  margin-top: 0.2rem;
+}
+
+.submit-button {
+  background-color: #5090e9;
+  border: none;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.submit-button:hover {
+  background-color: #0c5ecf;
+  font-size: 1.2rem;
+}
+
+#name-label,
+#number-label,
+#email-label {
+  display: block;
+}
+
+@media only screen and (max-width: 1100px) {
+  main {
+    width: 100%;
+    height: 100vh;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  :root {
+    font-size: 18px;
+  }
+
+  main {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    padding: 1rem 0.5rem 1rem 0.5rem;
+  }
+
+  .background-image {
+    background-position-x: -450px;
+    background-attachment: scroll;
+  }
+
+  .survey {
+    margin-left: 0.9rem;
+    margin-right: 0.7rem;
+  }
+
+  .submit-button {
+    font-size: 1.7rem;
+  }
+
+  .submit-button:hover {
+    font-size: 1.7rem;
+  }
+}

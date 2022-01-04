@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Santa Claus Customer Satisfation Survey</title>
+    <link
+      rel="stylesheet"
+      href="./freeCodeCamp_style_santa_customer_form.css"
+    />
+  </head>
+  <body class="background-image">
+    <main>
+      <h1 id="title">Santa Claus Inc.</h1>
+      <h2>Customer Satisfaction Survey</h2>
+      <p id="description">
+        We constantly evaluate our products and services in order to provide you
+        a unique and magical Christmas experience. Let us know how we did, tell
+        us about your Christmas and help us keep the enchantment alive.
+      </p>
+      <div class="survey">
+        <form action="" id="survey-form">
+          <div class="group" id="entries">
+            <div class="entry">
+              <label for="name" id="name-label">Name:</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="enter your name"
+                required
+              />
+            </div>
+            <div class="entry">
+              <label for="number" id="number-label">Age:</label>
+              <input
+                type="number"
+                name="number"
+                id="number"
+                min="1"
+                max="120"
+                placeholder="enter your age"
+              />
+            </div>
+            <div class="entry">
+              <label for="email" id="email-label">Email:</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="enter your email"
+                required
+              />
+            </div>
+          </div>
+          <div class="group">
+            <p>Please rate your overall experience with us:</p>
+            <select name="overall-rate" id="dropdown" required>
+              <option value="excellent">Excellent</option>
+              <option value="4">4</option>
+              <option value="3">3</option>
+              <option value="2">2</option>
+              <option value="poor">Poor</option>
+            </select>
+          </div>
+          <div class="group">
+            <p>How satisfied are you with our services?</p>
+            <div>
+              <label>
+              <input
+                type="radio"
+                name="satisfaction"
+                class="radio-class"
+                value="very_satisfied"
+              />Very satisfied
+              </label>
+              <label>
+              <input
+                type="radio"
+                name="satisfaction"
+                class="radio-class"
+                value="satisfied"
+              />Satisfied
+              </label>
+              <label>
+              <input
+                type="radio"
+                name="satisfaction"
+                class="radio-class"
+                value="neutral"
+              />Neutral
+              </label>
+              <label>
+              <input
+                type="radio"
+                name="satisfaction"
+                class="radio-class"
+                value="dissatisfied"
+              />Dissatisfied
+              </label>
+              <label>
+              <input
+                type="radio"
+                name="satisfaction"
+                class="radio-class"
+                value="very_dissatisfied"
+              />Very dissatisfied
+              </label>
+            </div>
+          </div>
+          <div class="group">
+            <p>How well did our products meet your expectations?</p>
+            <div>
+              <label>
+              <input
+                type="radio"
+                name="expectations"
+                class="radio-class"
+                value="extremely_well"
+              />Extremely well
+              </label>
+              <label>
+              <input
+                type="radio"
+                name="expectations"
+                class="radio-class"
+                value="somewhat_well"
+              />Somewhat well
+              </label>
+              <label>
+              <input
+                type="radio"
+                name="expectations"
+                class="radio-class"
+                value="not_so_well"
+              />Not so well
+              </label>
+              <label>
+              <input
+                type="radio"
+                name="expectations"
+                class="radio-class"
+                value="not_at_all_well"
+              />Not at all well
+              </label>
+            </div>
+          </div>
+          <div class="group">
+            <p>
+              Which of the following would you use to describe our services?
+            </p>
+            <div>
+              <label>
+                <input
+                  type="checkbox"
+                  name="service-description"
+                  class="checkbox-class"
+                  value="efiicient"
+                />Efficient
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  name="service-description"
+                  class="checkbox-class"
+                  value="reliable"
+                />Reliable
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  name="service-description"
+                  class="checkbox-class"
+                  value="high_quality"
+                />High quality
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  name="service-description"
+                  class="checkbox-class"
+                  value="good_value_for_money"
+                />Good value for money
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  name="service-description"
+                  class="checkbox-class"
+                  value="ineffective"
+                />Ineffective
+              <label>
+              <label>
+                <input
+                  type="checkbox"
+                  name="service-description"
+                  class="checkbox-class"
+                  value="unreliable"
+                />Unreliable
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  name="service-description"
+                  class="checkbox-class"
+                  value="poor_quality"
+                />Poor quality
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  name="service-description"
+                  class="checkbox-class"
+                  value="overpriced"
+                />Overpriced
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  name="service-description"
+                  class="checkbox-class"
+                  value="nonsense"
+                />A complete nonsense
+              </label>
+            </div>
+          </div>
+          <p id="send-message">Please, feel free to send us a message below.</p>
+          <div class="group">
+            <p>
+              Please, select a department to which your message will be
+              addressed to:
+            </p>
+            <select name="addressed" id="addressed" required>
+              <option value="old-fella">
+                The Old Fella Himself - Santa Claus
+              </option>
+              <option value="administration">
+                Head Administrator of the “Naughty or Nice List” - Alabaster
+                Snowball, Ph.D.
+              </option>
+              <option value="production">
+                Head of Toy Production - Bushy Evergreen, Engr.
+              </option>
+              <option value="security">
+                Head of Elf Security and White Bearded Man’s Bodyguard - Pepper
+                Minstix, Sir.
+              </option>
+              <option value="cabinet">
+                Head of Cabinet and Elves Team Leader - Shinny Upatree, Sec.
+              </option>
+              <option value="treats">
+                Head of Sweet Treats - Sugarplum Mary, Dbe.
+              </option>
+              <option value="reindeer">
+                Head of Reindeer Health Care - Wunorse Openslae
+              </option>
+            </select>
+            <textarea
+              name="message"
+              class="message-box"
+              placeholder="type your message"
+            ></textarea>
+          </div>
+          <div class="group">
+            <button type="submit" id="submit" class="submit-button">
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
