@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Roboto Condensed", monospace;
+}
+
+header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: white;
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+
+main {
+  margin-top: 150px;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: 600;
+  letter-spacing: 0.8rem;
+}
+
+p {
+  padding: 0 1.5rem;
+}
+
+li {
+  list-style: none;
+  text-align: center;
+  padding-right: 6rem;
+}
+
+input[type="email"],
+input[type="submit"] {
+  font: inherit;
+  font-size: 2rem;
+  height: 4rem;
+  margin: 0.5rem;
+  text-align: center;
+}
+
+.logo {
+  display: flex;
+  flex-grow: 100;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 5fr 3fr 3fr;
+  grid-template-rows: 60vh 60vh 25vh 25vh;
+}
+
+.eletric-guitar-1 {
+  grid-column: 2 / -1;
+  grid-row: 1 / 2;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2.5rem;
+}
+#image-1 {
+  background-image: url(https://images.pexels.com/photos/435840/pexels-photo-435840.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: 40%;
+}
+.eletric-guitar-2 {
+  grid-column: 2 / -1;
+  grid-row: 2 / 3;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  color: white;
+  font-size: 2rem;
+}
+#image-2 {
+  background-image: url(https://images.pexels.com/photos/811838/pexels-photo-811838.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: 80%;
+}
+
+.video-1 {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+.video-2 {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+#header-img {
+  height: 150px;
+}
+
+.form {
+  grid-column: 1 / -1;
+  grid-row: 3 / 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.terms {
+  grid-column: 1 / -1;
+  grid-row: 4 / 5;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#email {
+  width: 40rem;
+}
+
+#submit {
+  width: 10rem;
+}
+
+@media only screen and (max-width: 1150px) {
+  :root {
+    font-size: 12px;
+  }
+
+  li,
+  .terms {
+    font-size: 1.3rem;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  :root {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  header {
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+    white-space: nowrap;
+  }
+
+  li {
+    padding: 0 3rem;
+  }
+
+  ul {
+    display: flex;
+  }
+  main {
+    margin-top: 135.2px;
+  }
+
+  #header-img {
+    height: 120px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 5fr 3fr 3fr;
+    grid-template-rows: 50vh 50vh 50vh 50vh 15vh 15vh;
+  }
+
+  .video-1 {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+  }
+  .video-2 {
+    grid-column: 1 / -1;
+    grid-row: 4 / 5;
+  }
+  .eletric-guitar-1 {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+  }
+  .eletric-guitar-2 {
+    grid-column: 1 / -1;
+    grid-row: 3 / 4;
+  }
+
+  .form {
+    grid-column: 1 / -1;
+    grid-row: 5 / 6;
+  }
+
+  .terms {
+    grid-column: 1 / -1;
+    grid-row: 6 / 7;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  :root {
+    font-size: 8px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  header {
+    align-items: flex-start;
+  }
+
+  li {
+    font-size: 1.4rem;
+    padding: 0 4rem;
+  }
+
+  main {
+    margin-top: 113.6px;
+  }
+
+  #header-img {
+    height: 100px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 5fr 3fr 3fr;
+    grid-template-rows: 30vh 30vh 30vh 30vh 10vh 10vh;
+  }
+  #email {
+    width: 30rem;
+  }
+
+  #submit {
+    width: 10rem;
+  }
+}
