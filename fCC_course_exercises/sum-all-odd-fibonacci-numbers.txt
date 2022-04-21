@@ -1,0 +1,15 @@
+function sumFibs(num) {
+  let fibSum = 0;
+  let currNumber = 1;
+  let prevNumber = 0;
+  while(currNumber <= num) {
+    if (currNumber % 2 !== 0) {
+      fibSum += currNumber;
+    }
+  currNumber += prevNumber;
+  prevNumber = currNumber - prevNumber;
+  }
+  return fibSum;
+}
+
+sumFibs(4);

@@ -1,0 +1,17 @@
+function smallestCommons(arr) {
+  let max = Math.max(...arr);
+  let min = Math.min(...arr);
+  let nums = [];
+  
+  for (let i = min; i <= max; i++) {
+    nums.push(i);
+  }
+  
+  let gcd = (a, b) => (b === 0) ? a : gcd(b, a % b);
+  let lcm = (a, b) => a * b / gcd(a, b);
+  
+  return nums.reduce((multiple, curr) => lcm(multiple, curr));
+
+}
+
+smallestCommons([1,5]);
