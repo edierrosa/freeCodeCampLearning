@@ -1,0 +1,14 @@
+const Person = function(firstAndLast) {
+  // Only change code below this line
+  // Complete the method below and implement the others similarly
+  let arrName = firstAndLast.split(" ");
+  this.getFirstName = () => arrName[0];
+  this.getLastName = () => arrName[1];
+  this.getFullName = () => arrName.join(" ");
+  this.setFirstName = (first) => arrName[0] = first;
+  this.setLastName = (last) => arrName[1] = last;
+  this.setFullName = (firstAndLast) => arrName = firstAndLast.split(" ");
+};
+
+const bob = new Person('Bob Ross');
+bob.getFullName();
