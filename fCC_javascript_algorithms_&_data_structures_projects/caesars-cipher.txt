@@ -1,0 +1,10 @@
+function rot13(str) {
+  const alph = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  const rot13Alph = 'NOPQRSTUVWXYZABCDEFGHIJKLM';
+  
+  let index = (char) => rot13Alph[alph.indexOf(char)];
+  
+  return str.replace(/[A-Z]/g, index);
+}
+
+rot13("SERR PBQR PNZC");
