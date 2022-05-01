@@ -1,0 +1,6 @@
+function telephoneCheck(str) {
+  let validReg = /^1?[ ]?(\d{3}|\(\d{3}\))[-| ]?(\d{3}[ |-]?\d{4})$/gm;
+  return validReg.test(str);
+}
+
+telephoneCheck("555-555-5555");
