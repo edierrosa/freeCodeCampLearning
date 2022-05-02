@@ -1,0 +1,62 @@
+function checkCashRegister(price, cash, cid) {
+  let cidArr = cid.slice();
+  let currencyArr = {
+    "ONE HUNDRED": 10000,
+    "TWENTY": 2000,
+    "TEN": 1000,
+    "FIVE": 500,
+    "ONE": 100,
+    "QUARTER": 25,
+    "DIME": 10,
+    "NICKEL": 5,
+  	"PENNY": 1
+  };
+  
+  // Create sorted dictionary from cid array
+  let cashDrawer = {};
+  for (let i = 0; i < cidArr.length; i++) {
+    cidArr.reverse();
+    cashDrawer[cidArr[i][0]] = cidArr[i][1] * 100;
+  };
+
+  // Create a dictionary for the change
+  let changeDrawer = {};
+  for (let i = 0; i < cidArr.length; i++) {
+    changeDrawer[cidArr[i][0]] = 0;
+  };
+  
+  // Change due
+  let changeDue = cash * 100 - price * 100;
+  
+  // Cash in drawer total
+  let cidTotal = Object.keys(cashDrawer).reduce((sum, key) => sum + cashDrawer[key],0);
+
+  // Conditionals
+  if (changeDue > cidTotal) {
+    return {status: "INSUFFICIENT_FUNDS", change: []};
+  } else if (changeDue === cidTotal) {
+    return {status: "CLOSED", change: cid};
+  } else {
+    Object.keys(currencyArr).filter((item) => {
+      while (changeDue >= currencyArr[item] && cashDrawer[item] > 0) {
+        changeDue -= currencyArr[item];
+        cashDrawer[item] = cashDrawer[item] - currencyArr[item];
+        changeDrawer[item] = changeDrawer[item] + currencyArr[item] / 100;
+        }
+    });
+    
+    // Create result object
+    let resultArr = [];
+    for (let key in changeDrawer) {
+      if (changeDrawer[key] > 0) {
+          resultArr.push([key, changeDrawer[key]]);
+      }
+    }
+    if (changeDue > 0) {
+      return {status: "INSUFFICIENT_FUNDS", change: []};
+    }
+    return {status: "OPEN", change: resultArr};
+  }
+}
+  
+checkCashRegister(19.5, 20, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]]);
