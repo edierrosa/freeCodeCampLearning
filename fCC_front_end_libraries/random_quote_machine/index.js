@@ -1,7 +1,7 @@
 const { useState, useEffect } = React;
 
 const App = () => {
-  const [quote, setQuote] = useState("");
+  const [quote, setQuote] = useState({});
 
   // Fetch quote
   const fetchQuote = async () => {
