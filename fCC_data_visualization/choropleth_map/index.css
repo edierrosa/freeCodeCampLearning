@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+g {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #1e1e24;
+}
+
+.county:hover {
+  fill: rgb(221, 46, 142);
+}
+
+#tooltip {
+  background-color: #00000065;
+  color: white;
+  padding: 5px;
+  border-radius: 5%;
+  text-align: center;
+}
